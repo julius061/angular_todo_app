@@ -1,0 +1,12 @@
+<form>
+    <label for="task_name">Task name:</label>
+    <input id="task_name_field" type="text" class="form-control"/>
+    <button type="button" class="btn btn-success" (click)="addTaskToList()">Add Task</button>
+</form>
+<h3>TODO-List</h3>
+<hr>
+<ul>
+    <li *ngFor="let task of tasks" ><p>{{task.text}} <button class="btn btn-danger" (click)="deleteTaskFromList(task)">x</button></p>
+    </li>
+</ul>
+<hr>
